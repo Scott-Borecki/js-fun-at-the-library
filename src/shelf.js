@@ -14,9 +14,23 @@ function unshelfBook(bookTitle, shelf) {
   shelf.splice(index, 1);
 }
 
+function listTitles(shelf) {
+  var list;
+
+  for (var i = 0; i < shelf.length; i++) {
+    if (!list) {
+      list = shelf[i].title;
+    } else {
+      list = list + ', ' + shelf[i].title;
+    }
+  }
+
+  return list;
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
+  listTitles,
   // searchShelf
 };
