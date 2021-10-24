@@ -28,9 +28,19 @@ function listTitles(shelf) {
   return list;
 }
 
+function searchShelf(shelf, title) {
+  var result = false;
+
+  for (var i = 0; i < shelf.length; i++) {
+    if (shelf[i].title === title) { result = true; }
+  }
+
+  return result;
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
