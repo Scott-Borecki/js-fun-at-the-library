@@ -23,6 +23,7 @@ class Librarian {
     for (var i = 0; i < shelves.length; i++) {
       for (var ii = 0; ii < shelves[i].length; ii++) {
         if (shelves[i][ii].title === bookTitle) {
+          this.library.shelves[shelves[i][ii].genre].splice(ii, 1);
           return 'Yes, we have ' + bookTitle;
         }
       }
