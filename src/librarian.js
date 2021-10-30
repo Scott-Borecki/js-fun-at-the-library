@@ -31,6 +31,15 @@ class Librarian {
 
     return 'Sorry, we do not have ' + bookTitle;
   }
+
+  calculateLateFee(days) {
+    var feePerDay, lateFee;
+
+    feePerDay = 0.25;
+    lateFee = Math.ceil(days * feePerDay);
+
+    return lateFee;
+  }
 }
 
 module.exports = Librarian;
