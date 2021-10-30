@@ -54,10 +54,10 @@ describe('Librarian (class)', function() {
     assert.equal(leta.greetPatron("Casey", false), "Hello, Casey!");
   });
 
-  it.skip('should confirm if a requested book is on the shelves', function() {
+  it('should confirm if a requested book is on the shelves', function() {
     var auroraLibrary = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", auroraLibrary);
-    var book = {title: 'The Fifth Season', genre: 'fantasy'}
+    var book = {title: 'The Fifth Season', genre: 'fantasy'};
 
     addBook(librarian.library, book);
 
@@ -66,10 +66,10 @@ describe('Librarian (class)', function() {
     assert.equal(bookConfirmation, "Yes, we have The Fifth Season");
   });
 
-  it.skip('should say if requested book is not found', function() {
+  it('should say if requested book is not found', function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
-    var book = { title: 'The Fifth Season', genre: 'fantasy' }
+    var book = { title: 'The Fifth Season', genre: 'fantasy' };
 
     addBook(librarian.library, book);
 
@@ -81,7 +81,7 @@ describe('Librarian (class)', function() {
   it.skip('should checkout the book if found', function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
-    var book = { title: 'The Fifth Season', genre: 'fantasy' }
+    var book = { title: 'The Fifth Season', genre: 'fantasy' };
 
     addBook(librarian.library, book);
 
